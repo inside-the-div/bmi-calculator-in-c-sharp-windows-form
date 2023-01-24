@@ -32,6 +32,7 @@ namespace BMIcalculator
             SQLselectQuery.Fill(HistoryDataTable);
             DatagridviewHistory.DataSource = HistoryDataTable;
             this.DatagridviewHistory.Columns["ID"].Visible = false;
+            DatagridviewHistory.AutoResizeColumns();
         }
 
         private void History_Load(object sender, EventArgs e)
