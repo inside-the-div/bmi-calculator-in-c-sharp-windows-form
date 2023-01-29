@@ -13,7 +13,7 @@ namespace BMIcalculator
 {
     public partial class History : Form
     {
-        SqlConnection DBconnection = new SqlConnection("Data Source=.; Initial Catalog = bmi_calculator_db; TrustServerCertificate=True; Integrated Security=True ");
+        SqlConnection DBconnection = new SqlConnection(Properties.Settings.Default.con);
         public History()
         {
             InitializeComponent();
@@ -89,7 +89,7 @@ namespace BMIcalculator
             }
             else
             {
-                string DeleteQuerry = "DELETE FROM tip_calculator_history WHERE  bill_id IN (" + Ids + ")";
+                string DeleteQuerry = "DELETE FROM bmi_calculator_history WHERE  bmi_id IN (" + Ids + ")";
                 DBconnection.Open();
                 SqlCommand deleteCommand = new SqlCommand(DeleteQuerry, DBconnection);
                 if (deleteCommand.ExecuteNonQuery() > 0)
@@ -104,7 +104,7 @@ namespace BMIcalculator
 
         private void btnDeleteAll_Click(object sender, EventArgs e)
         {
-            string DeleteQuerry = "DELETE FROM tip_calculator_history";
+            string DeleteQuerry = "DELETE FROM bmi_calculator_history";
             DBconnection.Open();
             SqlCommand deleteCommand = new SqlCommand(DeleteQuerry, DBconnection);
             if (deleteCommand.ExecuteNonQuery() > 0)

@@ -6,7 +6,7 @@ namespace BMIcalculator
 {
     public partial class BMIcalculator : Form
     {
-        SqlConnection DBconnection = new SqlConnection("Data Source=.; Initial Catalog = bmi_calculator_db; TrustServerCertificate=True; Integrated Security=True ");
+        SqlConnection DBconnection = new SqlConnection(Properties.Settings.Default.con);
         double Height, Weight, Result, Feet, Inch, Centimeter;
         public BMIcalculator()
         {

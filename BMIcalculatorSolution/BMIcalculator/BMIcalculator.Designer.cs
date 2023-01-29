@@ -224,10 +224,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(143, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(207, 37);
+            this.label5.Size = new System.Drawing.Size(206, 37);
             this.label5.TabIndex = 7;
             this.label5.Text = "BMI Calculator";
             // 
